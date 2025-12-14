@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Us - Bombay Biryani Club</title>
+  <link rel="stylesheet" href="find.css">
+  <link rel="stylesheet" href="../global/global.css">
+</head>
+
+<body>
+<!-- Header -->
+<header class="site-header">
+  <div class="header-left">
+    <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo" class="logo mobile-logo">
+    <span class="company-name">Bombay Biryani Club</span>
+  </div>
+
+  <div class="header-center">
+    <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo" class="logo desktop-logo">
+  </div>
+
+  <nav class="nav-menu">
+    <a href="../home/home.html" class="nav-link">Home</a>
+    <a href="../menu/menu.html" class="nav-link">Menu</a>
+    <a href="../catering/cantering.html" class="nav-link">Catering</a>
+    <a href="../contact/contact.html" class="nav-link">Contact Us</a>
+    <a href="../find/find.html" class="nav-link active">Find Us</a>
+  </nav>
+  <button class="hamburger-toggle" aria-expanded="false" aria-controls="nav-menu">
+  &#9776; </button>
+</header>
+
+<!-- Location Sections -->
+<section class="location-section" style="background-image: url('./peregrene/Peregrene Building.jpg');">
+  <div class="location-overlay">
+
+    <!-- Title -->
+    <h1 class="location-title">
+      <span class="title-text-wrap">
+        Peregrine Farm Stall<br>Grabouw
+      </span>
+      <img src="./peregrene/Peregrine Logo.jpg" alt="Peregrine Logo" class="location-logo">
+    </h1>
+
+    <!-- Description -->
+    <p class="location-text">
+      Nestled in the orchard-rich landscape of Grabouw, Peregrine Farm Stall is a destination that goes beyond a mere pitstop—it’s an ode to the fruitful abundance of the Elgin Valley.
+    </p>
+
+    <!-- Right-side Row: Map + Contact Info -->
+    <div class="right-side-row">
+      <!-- Map -->
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3301.3053220947277!2d19.032019975565408!3d-34.164110673114955!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1dcdc5f20684acdb%3A0xf4bfce9ff3d18e70!2sPeregrine%20Farm%20Stall!5e0!3m2!1sen!2sza!4v1758858744811!5m2!1sen!2sza"
+          width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="contact-info">
+        <p><img src="../global/images/Phone Logo.png" alt="📞" class="social-logo"><a href="tel:+27218489011"> 021 848 9011</a></p>
+        <p><img src="../global/images/Email Logo.png" alt="📧" class="social-logo"><a href="info@peregrinefarmstall.co.za"> Email</a></p>
+        <p><img src="../global/images/Website Logo.png" alt="🌐" class="social-logo"><a href="https://www.peregrinefarmstall.co.za/" target="_blank"> Website</a></p>
+        <p><img src="../global/images/Instagram Logo.png" alt="📸" class="social-logo"><a href="https://www.instagram.com/peregrinefarmstall/" target="_blank"> Instagram</a></p>
+        <p><img src="../global/images/Facebook Logo.png" alt="📘" class="social-logo"><a href="https://www.facebook.com/peregrinefarmstall/" target="_blank"> Facebook</a></p>
+        <!-- Button -->
+        <p><a href="https://maps.app.goo.gl/ubL56s192UjGecjL8" target="_blank" class="btn">Google Maps →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Floating Message Bubble -->
+<div class="chat-bubble" id="chatBubble">
+  <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo" class="logo">
+  <p class="chat-text">Where would you like see us next?</p>
+</div>
+
+<!-- Popup Form -->
+<div class="chat-popup" id="chatPopup">
+  <div class="chat-header">
+    <span>Find Us</span>
+    <button class="close-btn" id="closePopup">&times;</button>
+  </div>
+  <form class="contact-form" action="https://formspree.io/f/mldpdvoj" method="POST">
+    <label for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+    <label for="email">Email</label>
+    <input type="email" name="_replyto" id="email" placeholder="you@example.com" required>
+
+    <label for="message">Message</label>
+    <textarea name="message" id="message" rows="3" placeholder="Type your message here..." required></textarea>
+
+    <button type="submit" class="btn">Send Message</button>
+    <p id="form-status"></p>
+  </form>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-main-content">
+    <div class="footer-section contact-icons">
+      <a href="mailto:info.bombaybiryaniclub@gmail.com" target="_blank">
+        <img src="../global/images/Email Logo.png" alt="📧" class="footer-icon">
+      </a>
+      <a href=" " target="_blank">
+        <img src="../global/images/Whatsapp Logo.png" alt="Whatsapp" class="footer-icon">
+      </a>
+      <a href="https://www.instagram.com/bombaybiryaniclub?igsh=aDVsc3p5eDZoNmts&utm_source=qr" target="_blank">
+        <img src="../global/images/Instagram Logo.png" alt="Instagram" class="footer-icon">
+      </a>
+      <a href=" " target="_blank">
+        <img src="../global/images/Facebook Logo.png" alt="Facebook" class="footer-icon">
+      </a>
+    </div>
+    
+    <div class="footer-logo">
+      <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo">
+    </div>
+
+    <div class="footer-section about-us">
+      <p>Southful Indian. Clean ingredients. Ready Anytime.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Bombay Biryani Club. All rights reserved.
+  </div>
+</footer>
+
+<script src="find.js"></script>
+<script src="../global/global.js"></script>
+</body>
+</html>

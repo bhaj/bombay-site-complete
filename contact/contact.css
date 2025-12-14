@@ -1,0 +1,169 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* Contact Section */
+.contact-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.contact-overlay {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  padding: 100px 100px 100px 20px;
+}
+
+.contact-logos {
+  display: grid;
+  grid-template-columns: repeat(1, 3fr);
+  gap: 15%;
+  align-items: left;
+  justify-content: left;
+}
+
+/* Individual icons */
+.contact-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s, filter 0.3s;
+}
+
+.contact-icon:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Floating Card */
+.contact-card {
+  background: rgba(26, 37, 53, 0.85);
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 30%;
+  min-width: 350px;
+  width: 100%;
+  margin-top: 15%;
+  margin-bottom: 10%;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Visible Class for Smooth Fade-In */
+.contact-card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card Title and Text */
+.contact-title {
+  font-size: 2rem;
+  color: #C8A869;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* Form Styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-item {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 10px;
+  text-align: left;
+}
+
+.contact-item a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.contact-item span {
+  color: #F9F5EE;
+}
+
+
+/* Submit Button */
+.contact-form .btn {
+  padding: 12px;
+  margin-top: 10px;
+  background: #C8A869;
+  color: #1A2535;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.contact-form .btn:hover {
+  background: #E0C089;
+  transform: scale(1.05);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .contact-overlay {
+    justify-content: center;
+    padding: 50px 20px;
+  }
+
+  .contact-card {
+    max-width: 90%;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 0;
+  }
+
+  .contact-title {
+    font-size: 2rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+  }
+}
+

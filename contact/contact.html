@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Bombay Biryani Club</title>
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="../global/global.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-left">
+    <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo" class="logo mobile-logo">
+    <span class="company-name">Bombay Biryani Club</span>
+  </div>
+
+  <div class="header-center">
+    <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo" class="logo desktop-logo">
+  </div>
+  
+  <nav class="nav-menu">
+    <a href="../home/home.html" class="nav-link">Home</a>
+    <a href="../menu/menu.html" class="nav-link">Menu</a>
+    <a href="../catering/cantering.html" class="nav-link">Catering</a>
+    <a href="../contact/contact.html" class="nav-link active">Contact Us</a>
+    <a href="../find/find.html" class="nav-link">Find Us</a>
+  </nav>
+
+
+  <button class="hamburger-toggle" aria-expanded="false" aria-controls="nav-menu">
+  &#9776; </button>
+</header>
+
+<!-- Contact Section -->
+<section class="contact-section" style="background-image: url('../contact/Food\ 1.jpg');">
+  <div class="contact-overlay">
+    <div class="contact-card">
+      <h1 class="contact-title">Get in Touch</h1>
+
+      <!-- Contact Form -->
+      <form class="contact-form" action="https://formspree.io/f/mldpdvoj" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Your Name" required>
+
+        <label for="email">Email</label>
+        <input type="email" name="_replyto" id="email" placeholder="example@gmail.com" required>
+
+        <label for="message">Message</label>
+        <textarea name="message" id="message" rows="3" placeholder="Type your message here..." required></textarea>
+
+        <button type="submit" class="btn">Send Message</button>
+        <p id="form-status"></p>
+
+        <div class="contact-item">
+            <a href="#" target="_blank">
+              <img src="../global/images/Whatsapp Logo.png" alt="Whatsapp" class="contact-icon">
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+        <div class="contact-logos">
+          <div class="contact-item">
+            <a href="tel:+27" target="_blank">
+              <img src="../global/images/Phone Logo.png" alt="Phone" class="contact-icon">
+              <span>021 </span>
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <a href="mailto:info.bombaybiryaniclub@gmail.com" target="_blank">
+              <img src="../global/images/Email Logo.png" alt="Email" class="contact-icon">
+              <span>info.bombaybiryaniclub@gmail.com</span>
+            </a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-main-content">
+    <div class="footer-section contact-icons">
+      <a href="mailto:info.bombaybiryaniclub@gmail.com" target="_blank">
+        <img src="../global/images/Email Logo.png" alt="📧" class="footer-icon">
+      </a>
+      <a href=" " target="_blank">
+        <img src="../global/images/Whatsapp Logo.png" alt="Whatsapp" class="footer-icon">
+      </a>
+      <a href="https://www.instagram.com/bombaybiryaniclub?igsh=aDVsc3p5eDZoNmts&utm_source=qr" target="_blank">
+        <img src="../global/images/Instagram Logo.png" alt="Instagram" class="footer-icon">
+      </a>
+      <a href=" " target="_blank">
+        <img src="../global/images/Facebook Logo.png" alt="Facebook" class="footer-icon">
+      </a>
+    </div>
+    
+    <div class="footer-logo">
+      <img src="../global/images/Logo.png" alt="Bombay Biryani Club Logo">
+    </div>
+
+    <div class="footer-section about-us">
+      <p>Soulfull Indian. Clean ingredients. Ready Anytime.</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    © 2025 Bombay Biryani Club. All rights reserved.
+  </div>
+</footer>
+
+<script src="contact.js"></script>
+<script src="../global/global.js"></script>
+</body>
+</html>

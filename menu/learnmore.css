@@ -1,0 +1,173 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  color: #1A2535;
+  background-color: #F9F5EE;
+}
+
+/* Container for left and right */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Left image */
+.left-image {
+  width: 50%;
+  height: 100%;
+  flex-shrink: 0;
+}
+
+.left-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-top-right-radius: 2%;
+  border-bottom-right-radius: 2%;
+  transform: translateX(-100px); /* start off to the left */
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+/* When visible */
+.page-loaded .left-image img {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* Right content */
+.right-content {
+  width: 50%;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 30px;
+  transform: translateY(50px); /* start below */
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+  background-color: #F9F5EE;
+}
+
+.right-content h1 {
+  color: #1A2535;
+  border-bottom: 2px solid #C8A869; 
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+.page-loaded .right-content {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Sections */
+.section {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #1A2535;
+  padding-bottom: 10px;
+}
+
+.section h2 {
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2%;
+  color: #1A2535;
+}
+
+.section-content {
+  margin-top: 10px;
+  margin-left: 15px;
+}
+
+/* Collapsible toggle arrow */
+.toggle {
+  font-size: 1rem;
+}
+
+/* Highlights boxes */
+.highlight {
+  display: inline-block;
+  background: #C8A869;
+  color: #1A2535;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 5px;
+  position: relative;
+  cursor: default;
+}
+
+/* Tooltip */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  margin-left: 5px;
+  color: #1A2535;
+  font-weight: bold;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #333;
+  color: #fff;
+  text-align: left;
+  padding: 8px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 0.85rem;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table th, table td {
+  border: 1px solid #1A2535;
+  padding: 8px;
+  text-align: left;
+}
+
+table th {
+  background-color: #F2EFEA;
+  color: #1A2535;
+}
+
+.back-button {
+  display: inline-block;
+  margin-bottom: 30px;
+  padding: 8px 12px;
+  background-color: #1A2535;
+  color: #F9F5EE;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.back-button:hover {
+  background-color: #334a66;
+}

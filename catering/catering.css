@@ -1,0 +1,331 @@
+/* Hero Section */
+.hero {
+  height: 100vh;
+  background: url('./images/Food\ 2.jpg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  z-index: 0;
+}
+
+.hero-text {
+  position: relative; 
+  z-index: 2; 
+  background-color: rgba(26, 37, 53, 0.55);
+  padding: 1%;
+  border-radius: 5%;
+  text-align: center;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #C8A869;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  color: rgb(255, 255, 255); 
+  margin-bottom: 30px;
+}
+
+/* ================= Base & Background ================= */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F9F5EE;
+    color: #1A2535;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; 
+    z-index: -10;
+    background-image: url('/catering/images/Background.png');
+    background-repeat: repeat;
+    background-attachment: scroll;
+    opacity: 0.07; 
+}
+
+/* Hidden state */
+.fade-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state */
+.fade-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= Hero Section ================= */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    background: center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(26, 37, 53, 0.65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================= Buttons ================= */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #C8A869; /* Rich Gold */
+    color: #1A2535 !important; /* Deep Navy Text */
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background: #E0C089; /* Lighter Gold */
+    transform: translateY(-2px);
+}
+
+.hero-btn {
+    font-size: 1.1rem;
+}
+
+.book-now-btn {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+/* ================= Main Content & Alternating Blocks ================= */
+.catering-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 80px;
+}
+
+.catering-block {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    background: #F9F5EE;
+    border: 1px solid #E0C089; /* Light Gold Accent Border */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    padding: 30px;
+}
+
+.text-content {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.image-content {
+    flex: 1;
+    overflow: hidden;
+    border-radius: 0 12px 12px 0;
+}
+
+.block-content-wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap; 
+    gap: 30px;
+}
+
+.catering-block.reverse .image-content {
+    order: 0;
+    border-radius: 12px 0 0 12px;
+}
+
+.image-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.section-title {
+    font-size: 2.2rem;
+    color: #1A2535; /* Deep Navy */
+    text-align: center;
+    border-bottom: 3px solid #C8A869; /* Rich Gold Underline */
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+    border-top: 2px solid #C8A869;
+    border-bottom: 2px solid #C8A869;
+    padding: 10px 0;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 25px;
+}
+
+.sub-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.sub-list li {
+    padding-left: 20px;
+    position: relative;
+    color: #1A2535;
+}
+
+/* Gold bullet point accent */
+.sub-list li::before {
+    content: "•"; 
+    color: #C8A869; 
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    position: absolute;
+    left: 0;
+}
+
+/* ================= Booking Form ================= */
+.booking-form-section {
+    background: #1A2535; /* Deep Navy Background */
+    color: #F9F5EE;
+    padding: 60px 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.booking-form-section .section-title {
+    color: #C8A869; /* Rich Gold Title */
+    border-bottom-color: #C8A869;
+}
+
+.booking-form-section .section-description {
+    color: #A0B0C0; /* Light text for description */
+    margin-bottom: 40px;
+}
+
+.catering-form {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.catering-form input[type="text"],
+.catering-form input[type="email"],
+.catering-form input[type="tel"],
+.catering-form input[type="date"],
+.catering-form input[type="number"],
+.catering-form select,
+.catering-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #334a66; /* Lighter Navy border */
+    background: #F9F5EE; /* Creamy White background */
+    color: #1A2535;
+    font-size: 1rem;
+    flex: 1;
+}
+
+.catering-form select,
+.catering-form input[type="date"] {
+    appearance: none; /* For better styling of select */
+    min-width: 150px;
+}
+
+.catering-form textarea {
+    width: 100%;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    width: 100%;
+    font-size: 1.2rem;
+    padding: 15px;
+}
+
+
+/* ================= Responsive Design ================= */
+
+@media (max-width: 768px) {
+    .catering-block {
+        padding: 20px;
+    }
+
+    .catering-block.reverse .image-content {
+        order: 0;
+    }
+
+    .block-content-wrapper {
+        flex-direction: column; /* Stacks text and image */
+    }
+
+    .image-content, 
+    .catering-block.reverse .image-content {
+        order: -1;
+        min-height: 250px;
+        border-radius: 12px 12px 0 0;
+        height: 300px;
+    }
+
+    .text-content {
+        padding: 30px;
+    }
+
+    .form-row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .hero-text p {
+        font-size: 1rem;
+    }
+}
