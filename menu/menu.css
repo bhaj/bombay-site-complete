@@ -67,6 +67,7 @@ main, section {
 }
 
 .menu-hero-text {
+  padding: 1%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -81,7 +82,7 @@ main, section {
 }
 
 .menu-hero-text h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   color: #C8A869;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
 }
@@ -146,6 +147,8 @@ main, section {
 
 /* ================= Sidepanel ================= */
 .sidepanel {
+  opacity: 0;
+
   top: -20vh;
   position: fixed;
   left: 0;
@@ -160,6 +163,10 @@ main, section {
   z-index: 902;
   transition: all 0.3s cubic-bezier(0.79, -0.01, 0.28, 0.98);
   min-height: 120vh;
+}
+
+.is-scrolled {
+  opacity: 1;
 }
 
 .sidepanel a {

@@ -1,3 +1,10 @@
+@import url('../src/global_animation.css');
+
+.demo a {
+    top: 80vh;
+    bottom: auto;
+}
+
 /* Hero Section */
 .hero {
   height: 100vh;
@@ -20,7 +27,7 @@
 }
 
 .hero-text h1 {
-  font-size: 3rem;
+  font-size: 5rem;
   color: #C8A869;
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.9);
   margin-bottom: 10px;

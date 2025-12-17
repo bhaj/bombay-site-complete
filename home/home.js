@@ -95,4 +95,14 @@ document.addEventListener("DOMContentLoaded", () => {
   }, { threshold: 0.2 });
 
   fadeText.forEach(el => observer.observe(el));
+
+  // Smooth scroll on link click in #section04
+  var scrollLink = document.querySelector('#section04 a[href*="#"]');
+  if (scrollLink) {
+      scrollLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollBy(0, 100);
+      });
+  }
+
 });

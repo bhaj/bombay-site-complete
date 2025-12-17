@@ -1,3 +1,5 @@
+@import url('../src/global_animation.css');
+
 body {
   margin: 0;
   color: #333333;
@@ -154,8 +156,21 @@ body {
 }
 
 .image-slider img.active {
+  border-radius: 16px;
   display: block;
+  padding-left: 2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
 }
+.image-slider.right img.active {
+  border-radius: 16px;
+  display: block;
+  padding-left: 0rem;
+  padding-right: 2rem;
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+}
+
 
 .text {
   flex: 1;
@@ -168,7 +183,7 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   gap: 20px;
-  max-width: 1200px;
+  max-width: 75vw;
   margin: 40px auto;
   padding: 0px;
   background-color: #F9F5EE;

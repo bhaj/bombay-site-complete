@@ -306,6 +306,7 @@ html, body {
 }
 
 .menu-hero-text {
+  padding: 1%;
   position: absolute;
   top: 50%;
   left: 50%;

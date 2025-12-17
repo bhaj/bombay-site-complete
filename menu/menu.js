@@ -44,8 +44,8 @@ document.addEventListener('DOMContentLoaded', function () {
       smoothScrollTo(targetPosition, SLOW_SCROLL_DURATION);
       console.log('Scrolled down from hero to #chicken');
     }
-  }); */
-  }
+  }); 
+  } */
 
   // Smooth Scroll for Sidepanel Links
   sideLinks.forEach(link => {
@@ -100,4 +100,79 @@ document.addEventListener('DOMContentLoaded', function () {
   } else {
     console.error('SidebarToggle or Sidepanel element not found!');
   }
+
+
+  // Smooth scroll on link click in #section04
+  var scrollLink = document.querySelector('#section04 a[href*="#"]');
+  if (scrollLink) {
+      scrollLink.addEventListener('click', function(e) {
+          e.preventDefault();
+          window.scrollBy(0, 100);
+      });
+  }
+
+
+  const sidepanel = document.querySelector('.sidepanel');
+  const scrollThreshold = 100; // Kaç piksel kaydırıldığında tetikleneceği
+
+  function handleScroll() {
+    // window.scrollY veya document.documentElement.scrollTop, kaydırma miktarını verir.
+    if (window.scrollY > scrollThreshold) {
+      sidepanel.classList.add('is-scrolled');
+    } else {
+      // İsteğe bağlı: Geri yukarı kaydırılınca eski haline dönsün
+      sidepanel.classList.remove('is-scrolled');
+    }
+  }
+
+  // Sayfa kaydırıldığında handleScroll fonksiyonunu çağır
+  window.addEventListener('scroll', handleScroll);
+
+  // Sayfa yüklendiğinde de kontrol et (kullanıcı sayfayı yenilemiş olabilir)
+  handleScroll();
+
+
+  let hasScrolled = false;
+
+    // Handles the first scroll from the user
+    function handleFirstScroll() {
+      if (!hasScrolled) {
+        hasScrolled = true;
+        const storySection = document.querySelector('.content');
+        
+        if (storySection) {
+          smoothScrollTo(storySection.offsetTop);
+        }
+        window.removeEventListener('scroll', handleFirstScroll);
+      }
+    }
+
+    // Smooth scroll animation
+    function smoothScrollTo(targetY) {
+        const startY = window.scrollY;
+        const distance = targetY - startY;
+        const duration = 1500;
+
+        document.body.style.overflow = 'hidden';
+
+        let startTime = null;
+        function animation(currentTime) {
+          if (!startTime) startTime = currentTime;
+          const elapsed = currentTime - startTime;
+          const progress = Math.min(elapsed / duration, 1);
+          const ease = progress < 0.5
+            ? 4 * progress * progress * progress
+            : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+
+          window.scrollTo(0, startY + distance * ease);
+
+          if (elapsed < duration) {
+            requestAnimationFrame(animation);
+          } else {
+            document.body.style.overflow = 'auto';
+          }
+        }
+      requestAnimationFrame(animation);
+    }
+    window.addEventListener('scroll', handleFirstScroll);
 });
